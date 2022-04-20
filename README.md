@@ -4,24 +4,22 @@ Instructions to create a CICD pipeline in AWS
 ## CodeCommit
 To upload your code in a CodeCommit repository.  
 
-### Creating a new User  
-From IAM/Users - Create a new user  
-**Username**: CICD-User  
-**Options**:  
-  [x] Access Key  
-  [x] Password   
-:arrow_right:  
-Create a group 
-**Group name**: Admin
-**Policies/Policie name:** AdministratorAccess
-:arrow_right:  
-:arrow_right:  
-:arrow_right:  
-**Create user** :arrow_right:  
-:arrow_down:  **Download .csv**
---
-Select the new CICD-User
-Click on Security credentials/Https Git credentials/Generate credentials
---
-Upload cicd-demo Folder in the Code commit repository using git
-git clone [Repo URL]
+### Create new user
+**From IAM/Users** - Create a new user  
+**Username:** CICD-User  
+**Options:**
+  + [x] Access Key  
+  + [x] Password  
+
+**From the group tab** - Create a group  
+**Group name:** Admin  
+**Policies/policie name:** AdministratorAccess  
+
+**Click on Create user and Download .csv**
+
+### Generate git credentials
+**From the new user detail** - Security credentials/Https Git Credentials/Generate credentials
+
+### Upload the source code to CodeCommit
+Using git commands, upload cicd-demo folder in the Code commit repository
+
