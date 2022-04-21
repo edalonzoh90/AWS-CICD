@@ -46,5 +46,5 @@ Using git commands, and the CICD-User credentials upload cicd-demo folder in the
 **Build spec:** Use a buildspec file - (to use the buildspec.yml in the repo)  
 
 **Click on Create Build Project**
-
+**Into the Build Project** - Start build
 
