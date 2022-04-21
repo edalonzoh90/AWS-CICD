@@ -16,10 +16,18 @@ To upload your code in a CodeCommit repository.
 **Policies/policie name:** AdministratorAccess  
 
 **Click on Create user and Download .csv**
-
+​
+23
+### Upload the source code to CodeCommit
+24
+**From the CodeCommit option** - Creat
 ### Generate git credentials
 **From the new user detail** - Security credentials/Https Git Credentials/Generate credentials
 
 ### Upload the source code to CodeCommit
-Using git commands, upload cicd-demo folder in the Code commit repository
+**From the CodeCommit option** - Create repository
+**Name:** cicd-repo  
 
+Using git commands, and the CICD-User credentials upload cicd-demo folder in the Code commit repository.
+
+## CodeBuild
