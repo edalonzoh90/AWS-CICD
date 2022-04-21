@@ -43,5 +43,6 @@ Using git commands, and the CICD-User credentials upload cicd-demo folder in the
 **Image Version:** Always use the latest image for this runtime version  
 **Environment type:** Linux  
 **Service role:** New service role
+**Build spec:** Use a buildspec file - (to use the buildspec.yml in the repo)
 
 
