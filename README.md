@@ -69,3 +69,5 @@ from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/
 
 **From DevOpsAppBuild project** - Start build  
 After build ends, the new artifact should be added to cicddevopsartifacts bucket
+
+## CodeDeployment
