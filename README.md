@@ -48,3 +48,11 @@ Using git commands, and the CICD-User credentials upload cicd-demo folder in the
 **Click on Create Build Project**  
 **Into the Build Project** - Start build  
 
+### Artifacts  
+To create artifacts from the build, following code were added to buildspec.yml file  
+
+    artifacts:
+      files:
+        - '**/*'
+      name: DevOpsAppArtifact
+
