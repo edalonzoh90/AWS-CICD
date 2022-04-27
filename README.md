@@ -70,4 +70,15 @@ from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/
 **From DevOpsAppBuild project** - Start build  
 After build ends, the new artifact should be added to cicddevopsartifacts bucket
 
-## CodeDeployment
+## CodeDeployment  
+To do the deployment it's necesary to create the EC2 instances.  
+
+**From IAM Dashboard/Roles** - Create Role  
+**Common use case:** EC2  
+**Policies:** AmazonS3ReadOnlyAccess   
+**Role name:** EC2RoleForCodeDeploy  
+
+**From EC2 Dashboard/Instances** - Launch instance
+
+
+
