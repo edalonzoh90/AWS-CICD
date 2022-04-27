@@ -115,6 +115,12 @@ It's necesary to setup an aws cli profile, create a new S3 bucket and enable ver
     aws configure --profile aws-devops
     aws s3 mb s3://aws-devops-cicd-dev --region us-east-1 --profile aws-devops
     aws s3api put-bucket-versioning --bucket aws-devops-cicd-dev --versioning-configuration Status=Enabled --region us-east-1 --profile aws-devops
+    
+It's necessary to upload the code into the S3 bucket, to do that.
+**From Linux terminal from the folder where the appspec.yml is**
+    
+    aws deploy push --application-name CodeDeployDev --s3-location s3://aws-devops-cicd-dev/codedeploy-dev/app.zip --ignore-hidden-files --region us-east-1 --profile aws-devops
+
 
 **Access key ID:** This info it's in the CICD-user_credentials.csv file  
 **Secret access key:** This info it's in the CICD-user_credentials.csv file   
@@ -140,3 +146,8 @@ It's necesary to setup an aws cli profile, create a new S3 bucket and enable ver
 **From CodeDeployDev** - Create deployment  
 **Deployment group:** DevInstances  
 **Revision type:** My application is stored in Amazon S3
+**Revision location:** Pick the s3://aws-devops-cicd-dev/codedeploy-dev/app.zip?...
+
+### Verifying if the app is up and running
+**From the EC2/Instances/DevServer/Security groups/Inbound rules** - Verify if the port 80 it's enabled for HTTP type, if not add a rule to enable it.  
+**From the EC2/Instances/DevServer** - Click on the link to Public IPV4 DNS - The site should be displayed in the browser.   
