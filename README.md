@@ -67,4 +67,5 @@ from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/
 **Artifacts packaging:** Zip  
 **Click on Update Artifact**  
 
-**From DevOpsAppBuild project** - Start build
+**From DevOpsAppBuild project** - Start build  
+After build ends, the new artifact should be added to cicddevopsartifacts bucket
