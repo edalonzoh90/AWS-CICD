@@ -79,6 +79,7 @@ To do the deployment it's necesary to create the EC2 instances.
 **Role name:** EC2RoleForCodeDeploy  
 
 **From EC2 Dashboard/Instances** - Launch instance
-
-
+**Name:** DevServer
+**Advanced Details**
+**IAM instance profile:** EC2RoleForCodeDeploy
 
