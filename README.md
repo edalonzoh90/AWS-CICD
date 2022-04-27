@@ -87,3 +87,13 @@ To do the deployment it's necesary to create the EC2 instances.
 **Advanced Details**  
 **IAM instance profile:** EC2RoleForCodeDeploy  
 
+## To connect to the EC2 Instance  
+**From a linux terminal, with the ssh client installed** -  
+ssh -i "path to the .pem file" ec2-user@IPv4-public-dns  
+
+    ssh -i "CICD-DEPLOY.pem" ec2-user@ec2-35-170-197-215.compute-1.amazonaws.com
+    
+*** In case of getting a bad permissions error, run the following command:  
+    
+    chmod 400 CICD-DEPLOY.pem  
+
