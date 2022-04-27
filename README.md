@@ -108,10 +108,13 @@ ssh -i "path to the .pem file" ec2-user@IPv4-public-dns
   
 ## Deploying
 
-**It's necesary to setup an aws cli profile**  
+It's necesary to setup an aws cli profile, create a new S3 bucket and enable versioning in it.  
+
 **From Linux terminal**
 
     aws configure --profile aws-devops
+    aws s3 mb s3://aws-devops-cicd-dev --region us-east-1 --profile aws-devops
+    aws s3api put-bucket-versioning --bucket aws-devops-cicd-dev --versioning-configuration Status=Enabled --region us-east-1 --profile aws-devops
 
 **Access key ID:** This info it's in the CICD-user_credentials.csv file  
 **Secret access key:** This info it's in the CICD-user_credentials.csv file   
