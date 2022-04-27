@@ -106,4 +106,34 @@ ssh -i "path to the .pem file" ec2-user@IPv4-public-dns
     sudo ./install auto
     sudo service codedeploy-agent status
   
+## Deploying
 
+**It's necesary to setup an aws cli profile**  
+**From Linux terminal**
+
+    aws configure --profile aws-devops
+
+**Access key ID:** This info it's in the CICD-user_credentials.csv file  
+**Secret access key:** This info it's in the CICD-user_credentials.csv file   
+**Region:** us-east-1  
+**Output:** json  
+
+**From IAM Dashboard/Roles** - Create Role  
+**Use case for other services:** CodeDeploy/CodeDeploy  
+**Role name:** CodeDeployRole  
+
+**From CodeDeploy** - Create application  
+**Application name:** CodeDeployDev  
+**Compute platform:** EC2/On-premises  
+
+**From CodeDeployDev** - Create deployment group  
+**Deployment group name:** DevInstances  
+**Service Role:** DevInstances  
+**Environments configuration:** Amazon EC2 instances  
+**Key:** Name  
+**Value:** DevServer  
+**Load balancer:** Uncheck  
+
+**From CodeDeployDev** - Create deployment  
+**Deployment group:** DevInstances  
+**Revision type:** My application is stored in Amazon S3
