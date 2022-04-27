@@ -19,12 +19,12 @@ To upload your code in a CodeCommit repository.
 
 ### Upload the source code to CodeCommit
 
-**From the CodeCommit option** - Creat
+**From the CodeCommit option** - Create
 ### Generate git credentials
 **From the new user detail** - Security credentials/Https Git Credentials/Generate credentials
 
-### Upload the source code to CodeCommit
-**From the CodeCommit option** - Create repository
+### Upload the source code to CodeCommit  
+**From the CodeCommit option** - Create repository  
 **Name:** cicd-repo  
 
 Using git commands, and the CICD-User credentials upload cicd-demo folder in the Code commit repository.
@@ -58,7 +58,7 @@ from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/
       name: DevOpsAppArtifact
 
 **From S3 Bucket** - Create new Bucket  
-**Name:** cicddevopsartifacts
+**Name:** cicddevopsartifacts  
 
 **From DevOpsAppBuild project** - Edit Artifacts  
 **Type:** Amazon S3  
@@ -68,7 +68,7 @@ from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/
 **Click on Update Artifact**  
 
 **From DevOpsAppBuild project** - Start build  
-After build ends, the new artifact should be added to cicddevopsartifacts bucket
+After build ends, the new artifact should be added to cicddevopsartifacts bucket  
 
 ## CodeDeployment  
 To do the deployment it's necesary to create the EC2 instances.  
@@ -78,8 +78,12 @@ To do the deployment it's necesary to create the EC2 instances.
 **Policies:** AmazonS3ReadOnlyAccess   
 **Role name:** EC2RoleForCodeDeploy  
 
-**From EC2 Dashboard/Instances** - Launch instance
-**Name:** DevServer
-**Advanced Details**
-**IAM instance profile:** EC2RoleForCodeDeploy
+**From EC2 Dashboard/Instances** - Launch instance  
+**Name:** DevServer  
+**Key Pair:** - Create new key pair  
+**Key pair name:** cicd-rsa  
+**Download the .pem file** 
+
+**Advanced Details**  
+**IAM instance profile:** EC2RoleForCodeDeploy  
 
