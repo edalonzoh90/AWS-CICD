@@ -49,10 +49,22 @@ Using git commands, and the CICD-User credentials upload cicd-demo folder in the
 **Into the Build Project** - Start build  
 
 ### Artifacts  
-To create artifacts from the build, following code were added to buildspec.yml file  
+To create artifacts from the build, following code was added to the bottom of buildspec.yml file  
+from [aws documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html)
 
     artifacts:
       files:
         - '**/*'
       name: DevOpsAppArtifact
 
+**From S3 Bucket** - Create new Bucket  
+**Name:** cicddevopsartifacts
+
+**From DevOpsAppBuild project** - Edit Artifacts  
+**Type:** Amazon S3  
+**BucketName:** cicddevopsartifacts  
+**NameSpace Type:** Build ID  
+**Artifacts packaging:** Zip  
+**Click on Update Artifact**  
+
+**From DevOpsAppBuild project** - Start build
