@@ -1,5 +1,6 @@
 # AWS-CICD
-Instructions to create a CICD pipeline in AWS
+Instructions to create my first CICD pipeline in AWS  
+Based on [devops with aws  tutorial](https://www.linkedin.com/learning/devops-with-aws)
 
 ## CodeCommit
 To upload your code in a CodeCommit repository.  
@@ -171,3 +172,4 @@ It's necessary to upload the code into the S3 bucket, to do that.
 **Application name:** CodeDeployDev  
 **Deployment group:** DevIntances  
 
+My first aws pipeline is ready! :partying_face:
