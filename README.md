@@ -165,6 +165,9 @@ It's necessary to upload the code into the S3 bucket, to do that.
 **Source**  
 **Source provider:** AWS CodeCommit  
 **Repository name:** cicd-repo  
-**Branch name:** master
+**Branch name:** master  
 **Deploy**  
 **Deploy provider:** AWS CodeDeploy  
+**Application name:** CodeDeployDev  
+**Deployment group:** DevIntances  
+
