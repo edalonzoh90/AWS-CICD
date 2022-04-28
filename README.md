@@ -155,3 +155,16 @@ It's necessary to upload the code into the S3 bucket, to do that.
 ### Verifying if the app is up and running
 **From the EC2/Instances/DevServer/Security groups/Inbound rules** - Verify if the port 80 it's enabled for HTTP type, if not add a rule to enable it.  
 **From the EC2/Instances/DevServer** - Click on the link to Public IPV4 DNS - The site should be displayed in the browser.   
+
+## CodePipeline  
+**From Pipeline** - Create Pipeline  
+**Pipeline name:** cicd-pipeline  
+**Advanced settings**  
+**Artifact store:** Custom location  
+**Bucket:** cicddevopsartifacts  
+**Source**  
+**Source provider:** AWS CodeCommit  
+**Repository name:** cicd-repo  
+**Branch name:** master
+**Deploy**  
+**Deploy provider:** AWS CodeDeploy  
