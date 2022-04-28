@@ -105,7 +105,11 @@ ssh -i "path to the .pem file" ec2-user@IPv4-public-dns
     chmod +x ./install
     sudo ./install auto
     sudo service codedeploy-agent status
-  
+
+*** This step can be replaced by adding the above code in the User Data field in the EC2 creation. Adding following code in the first line
+
+    #!/bin/bash
+
 ## Deploying
 
 It's necesary to setup an aws cli profile, create a new S3 bucket and enable versioning in it.  
@@ -115,8 +119,8 @@ It's necesary to setup an aws cli profile, create a new S3 bucket and enable ver
     aws configure --profile aws-devops
     aws s3 mb s3://aws-devops-cicd-dev --region us-east-1 --profile aws-devops
     aws s3api put-bucket-versioning --bucket aws-devops-cicd-dev --versioning-configuration Status=Enabled --region us-east-1 --profile aws-devops
-    
-It's necessary to upload the code into the S3 bucket, to do that.
+
+It's necessary to upload the code into the S3 bucket, to do that.  
 **From Linux terminal from the folder where the appspec.yml is**
     
     aws deploy push --application-name CodeDeployDev --s3-location s3://aws-devops-cicd-dev/codedeploy-dev/app.zip --ignore-hidden-files --region us-east-1 --profile aws-devops
